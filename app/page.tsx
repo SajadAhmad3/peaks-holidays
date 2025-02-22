@@ -7,3 +7,4 @@ export default function Page() {
     <Home />
   </div>
 }
+
