@@ -1,36 +1,22 @@
-module.exports = {
-  content: ["./src/**/*.{js,tsx,jsx}"],
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     colors: {
       primary: {
-        DEFAULT: "#8b5cf5",
-        0: "#E5F1FB",
-        50: "#f5f3ff",
-        100: "#ede8fd",
-        200: "#ddd6fe",
-        300: "#c4b4fd",
-        400: "#a68bfa",
-        500: "#8b5cf5",
-        600: "#7c3bec",
-        700: "#6d28d9",
-        800: "#5b21b6",
-        900: "#4b1e94",
-        950: "#000711",
+        DEFAULT: "#A35C7A",
+        500: "#A35C7A",
       },
       secondary: {
-        DEFAULT: "#6b7280",
-        0: "#FCFCFC",
-        50: "#f9fafb",
-        100: "#f3f4f6",
-        200: "#e4e7eb",
-        300: "#d1d5da",
-        400: "#9ca3af",
-        500: "#6b7280",
-        600: "#4b5563",
-        700: "#374151",
-        800: "#1f2937",
-        900: "#111827",
-        950: "#171717",
+        DEFAULT: "#C890A7",
+        50: "#FBF5E5",
+        500: "#C890A7",
+        950: "#212121",
       },
       rose: {
         DEFAULT: "#f43f5e",
@@ -476,18 +462,17 @@ module.exports = {
       },
     },
     fontFamily: {
-      regular: ["SFProDisplay-Regular", "sans-serif"],
-      boldness: ["sfpro-boldness", "sans-serif"],
-      black: ["sfproDisplay-black", "sans-serif"],
-      bold: ["SFpro-display-Bold", "sans-serif"],
-      boldItalic: ["SFProDisplay-BoldItalic", "sans-serif"],
-      heavy: ["SFProDisplay-Heavy", "sans-serif"],
-      light: ["SFProDisplay-Light", "sans-serif"],
-      medium_1: ["SFProDisplay-medium-webfont", "sans-serif"],
-      medium_2: ["SFProDisplay-medium-webfont2", "sans-serif"],
-      semibold: ["SFProDisplay-Semibold", "sans-serif"],
-      sm_boldItalic: ["SFProDisplay-SemiboldItalic", "sans-serif"],
-      medium: ["SFProDisplay-Medium", "sans-serif"],
+      modicaMedium: ["var(--font-modica-medium)"],
+      modicaSemibold: ["var(--font-modica-semibold)"],
+      modicaLight: ["var(--font-modica-light)"],
+      heading: ["var(--font-modica-bold)"],
+      modicaItalic: ["var(--font-modica-light-italic)"],
+      modicRegular: ["var(--font-modica-regular)"],
+      modicBold: ["var(--font-modica-bold)"],
+
+      sfproRegular: ["var(--font-sfpro-regular)"],
+      sfproLight: ["var(--font-sfpro-light)"],
+      sfproMedium: ["var(--font-sfpro-medium)"],
     },
 
     fontSize: {
@@ -521,4 +506,6 @@ module.exports = {
       },
     },
   },
+  plugins: [],
 };
+export default config;

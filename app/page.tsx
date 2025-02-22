@@ -1,10 +1,10 @@
 import Home from "./home";
 
-
-export default function Page() {
-  return
-   <div>
-    <Home />
-  </div>
-}
-
+const Page = () => {
+  return (
+    <div>
+      <Home />
+    </div>
+  );
+};
+export default Page;
