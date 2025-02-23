@@ -21,7 +21,7 @@ const Header = () => {
   }, []);
 
   const handleContactUsClick = () => {
-    router.push("/contact");
+    router.push("/contact-us");
   };
 
   return (
@@ -67,7 +67,6 @@ const Header = () => {
               </button>
             </div>
           </div>
-
           <Menu />
         </div>
       </nav>
