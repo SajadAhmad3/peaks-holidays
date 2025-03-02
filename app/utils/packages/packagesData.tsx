@@ -5,7 +5,7 @@ export const packagesData = [
     location: "Thailand",
     duration: "3 days",
     people: "2 Person",
-    price: "149.00",
+    price: "14999",
   },
   {
     title: "Mountain Adventure",
@@ -13,7 +13,7 @@ export const packagesData = [
     location: "Switzerland",
     duration: "5 days",
     people: "4 Person",
-    price: "299.00",
+    price: "29999",
   },
   {
     title: "Desert Safari",
@@ -21,7 +21,7 @@ export const packagesData = [
     location: "Dubai",
     duration: "2 days",
     people: "3 Person",
-    price: "199.00",
+    price: "11199",
   },
   {
     title: "Cultural Trip",
@@ -29,7 +29,7 @@ export const packagesData = [
     location: "Italy",
     duration: "6 days",
     people: "2 Person",
-    price: "399.00",
+    price: "13999",
   },
   {
     title: "Jungle Expedition",
@@ -37,7 +37,7 @@ export const packagesData = [
     location: "Amazon",
     duration: "7 days",
     people: "5 Person",
-    price: "349.00",
+    price: "20000",
   },
   {
     title: "Northern Lights Experience",
@@ -45,6 +45,6 @@ export const packagesData = [
     location: "Norway",
     duration: "4 days",
     people: "2 Person",
-    price: "449.00",
+    price: "14449",
   },
 ];

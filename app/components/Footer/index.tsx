@@ -38,7 +38,7 @@ const Footer = () => {
             Want to Take Tour Packages?
           </h2>
           <button
-            className="max-w-[150px] bg-green-600 hover:bg-green-700 text-white px-2 py-2 rounded-md lg:text-md md:text-sm text-xs transition duration-300 font-bold"
+            className="max-w-[150px] bg-primary hover:bg-primary transition duration-300 text-white px-4 py-2 text-sm font-bold"
             onClick={handleClick}
           >
             Book A Trip
@@ -65,7 +65,7 @@ const Footer = () => {
               <PhoneCall size={25} className="text-yellow-500" />
               <div>
                 <Link href="/">
-                  <p className="text-md">+916006089901</p>
+                  <p className="text-md">+919596173535</p>
                 </Link>
                 <Link href="/">
                   <p className="text-md">+916005252876</p>
@@ -76,7 +76,7 @@ const Footer = () => {
               <MessageCircle size={25} className="text-yellow-500" />
               <div>
                 <Link href="/">
-                  <p className="text-md">+916006089901</p>
+                  <p className="text-md">+919596173535</p>
                 </Link>
                 <Link href="/">
                   <p className="text-md">+916005252876</p>
@@ -87,9 +87,7 @@ const Footer = () => {
               <Mail size={25} className="text-yellow-500" />
               <div>
                 <Link href="/">
-                  <p className="text-md break-all">
-                    snowveiladventures@gmail.com
-                  </p>
+                  <p className="text-md break-all">peaksholidays@gmail.com</p>
                 </Link>
               </div>
             </div>
@@ -97,7 +95,7 @@ const Footer = () => {
               <MapPin size={40} className="text-yellow-500" />
               <div>
                 <p className="text-md">
-                  Reshi Complex, Nambalnar Tangmarg Baramulla - 193402
+                  Main Market Gulmarg, Baramulla - 193403
                 </p>
               </div>
             </div>
@@ -106,9 +104,9 @@ const Footer = () => {
         <div className="flex flex-col  gap-5 ">
           <h3 className="text-[20px] font-semibold">Follow Us</h3>
           <div className="flex gap-5 cursor-pointer">
-            <Instagram className=" transtion  duration-300 hover:-translate-y-1 hover:text-green-500" />
-            <Facebook className=" transtion  duration-300 hover:-translate-y-1 hover:text-green-500" />
-            <Twitter className=" transtion  duration-300 hover:-translate-y-1 hover:text-green-500" />
+            <Instagram className=" transtion  duration-300 hover:-translate-y-1 hover:text-primary" />
+            <Facebook className=" transtion  duration-300 hover:-translate-y-1 hover:text-primary" />
+            <Twitter className=" transtion  duration-300 hover:-translate-y-1 hover:text-primary" />
           </div>
         </div>
       </div>
@@ -116,8 +114,7 @@ const Footer = () => {
       <div className="max-w-[1300px] mx-auto pb-10">
         <hr className="border-gray" />
         <p className="text-center pt-4 text-md">
-          Copyright &copy; <span className="text-green-500 ">Snowveil</span>{" "}
-          <span>Adventures</span>
+          Copyright &copy; <span className="text-primary ">Peaks Holidays</span>{" "}
         </p>
       </div>
     </div>

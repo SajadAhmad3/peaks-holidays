@@ -12,14 +12,15 @@ const Destinations = () => {
       <Link href={`/destinations`} className="relative px-6 py-12">
         <Heading title="DESTINATIONS" description="Popular Destinations" />
 
-        <div className="grid grid-cols-3 gap-4 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
           {/* First Image (Takes 2 cols) */}
-          <div className="col-span-2 relative overflow-hidden">
+          <div className="md:col-span-2 relative overflow-hidden">
             <Image
               src={destinationsData[0].image}
               alt={destinationsData[0].name}
               width={600}
               height={400}
+              priority
               className="rounded-lg object-cover w-full h-full hover:scale-105 transition-all duration-300"
             />
             <div className="absolute top-2 left-2">
@@ -38,6 +39,7 @@ const Destinations = () => {
                 alt={place.name}
                 width={300}
                 height={200}
+                priority
                 className="rounded-lg object-cover w-full h-full hover:scale-105 transition-all duration-300"
               />
               <div className="absolute top-2 left-2">
@@ -57,6 +59,7 @@ const Destinations = () => {
                 alt={place.name}
                 width={300}
                 height={200}
+                priority
                 className="rounded-lg object-cover w-full h-full hover:scale-105 transition-all duration-300"
               />
               <div className="absolute top-2 left-2">

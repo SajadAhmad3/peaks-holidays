@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import navigationData from "./Nav.json";
 import Link from "next/link";
 import Menu from "../Header/Menu/index";
@@ -9,6 +9,7 @@ import Image from "next/image";
 
 const Header = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -28,9 +29,9 @@ const Header = () => {
     <div className="fixed w-full top-0 left-0 right-0 z-[9999] transition-all duration-300">
       <nav
         className={`relative z-10 mx-auto px-10 py-4 transition-all duration-300 ${
-          scrolled
-            ? "bg-secondary-50 shadow-md text-black py-4"
-            : "bg-white/10 backdrop-blur text-white py-4"
+          pathname === "/" && !scrolled
+            ? "bg-white/10 backdrop-blur text-white py-4"
+            : "bg-secondary-50 shadow-md text-black py-4"
         }`}
       >
         <div className="flex items-center justify-between w-full mx-auto">
@@ -48,7 +49,7 @@ const Header = () => {
             <ul className="lg:flex space-x-8 hidden">
               {navigationData.map((item, index) => (
                 <li
-                  className="my-2 transition-all duration-300 hover:text-secondary hover:scale-110"
+                  className={` cursor-pointer my-2 transition-all duration-300 hover:text-secondary hover:scale-110`}
                   key={index}
                 >
                   <Link href={item.path}>

@@ -12,7 +12,7 @@ export const Heading = ({
   showRight = true,
 }: headingProps) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center text-center">
       <div className="flex items-center justify-center gap-4">
         {showLeft && (
           <div className="flex flex-col items-end">
@@ -28,9 +28,7 @@ export const Heading = ({
           </div>
         )}
       </div>
-      <h3 className="text-black/90 font-bold text-[40px]">
-        {description}
-      </h3>
+      <h3 className="text-black/90 font-bold text-[30px] md:text-[40px]">{description}</h3>
     </div>
   );
 };

@@ -1,8 +1,6 @@
 [
     { "path": "/", "label": "Home" },
-    { "path": "/about", "label": "About" },
     { "path": "/destinations", "label": "Destinations" },
-    { "path": "/activities", "label": "Activities" },
     { "path": "/packages", "label": "Packages" }
   ]
   

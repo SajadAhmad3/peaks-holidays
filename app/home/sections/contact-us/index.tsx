@@ -4,7 +4,7 @@ import Image from "next/image";
 const ContactUs = () => {
   return (
     <Container className="mb-10 ">
-      <div className="relative w-full h-[60vh] overflow-hidden">
+      <div className="relative w-full h-[100vh] overflow-hidden">
         <div className="w-full h-full overflow-hidden">
           <Image
             src="/images/home/banner.jpg"
