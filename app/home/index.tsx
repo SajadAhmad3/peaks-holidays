@@ -4,6 +4,8 @@ import About from "./sections/about";
 import Services from "./sections/services";
 import Destinations from "./sections/destinations";
 import Packages from "./sections/packages";
+import Team from "./sections/team";
+import ContactUs from "./sections/contact-us";
 
 function Home() {
   return (
@@ -13,6 +15,8 @@ function Home() {
       <Services />
       <Destinations />
       <Packages />
+      <Team/>
+      <ContactUs />
     </div>
   );
 }
