@@ -6,7 +6,7 @@ import React from "react";
 
 const Team = () => {
   return (
-    <Container className="mb-10">
+    <Container className="my-20">
       <div>
         <Heading title="Team" description="Meet Our Team"></Heading>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 mx-auto">

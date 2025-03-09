@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { MapPin, Calendar, Users } from "lucide-react";
+import { MapPin, Calendar, Users, MessageCircle, Phone } from "lucide-react";
 
 interface PackageProps {
   title: string;
@@ -59,10 +59,21 @@ const PackageCard: React.FC<PackageProps> = ({
         </p>
 
         {/* Buttons */}
-        <div className="flex gap-2 mt-4">
-          <button className="w-1/2 px-3 py-2 bg-gray-200 text-gray-800 font-medium rounded-md hover:bg-gray-300">
-            Read More
-          </button>
+        <div className="flex items-center justify-between gap-2 mt-4">
+          <div className="flex items-center gap-4">
+            <div
+              className="hover:scale-110 bg-primary hover:bg-secondary transition duration-300 text-white px-4 py-2 rounded-lg text-sm"
+              // onClick={handleCallRedirect}
+            >
+              <Phone className="cursor-pointer" />
+            </div>
+            <div
+              className="hover:scale-110 bg-primary hover:bg-secondary transition duration-300 text-white px-4 py-2 rounded-lg text-sm"
+              // onClick={handleWhatsAppRedirect}
+            >
+              <MessageCircle className="cursor-pointer" />
+            </div>
+          </div>
           <button className="w-1/2 px-3 py-2 bg-primary text-white font-medium rounded-md hover:bg-secondary">
             Book Now
           </button>
