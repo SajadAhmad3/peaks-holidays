@@ -16,15 +16,15 @@ const DestinationCard: React.FC<DestinationProps> = ({
   activities,
 }) => {
   return (
-    <div className=" bg-gray-800 p-10 mb-8 mx-20">
-      <div className="flex flex-col gap-10 lg:flex-row ">
-        <div className="flex-1 transform duration-700 hover:scale-105">
+    <div className=" bg-white-400 md:mx-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 p-4 md:p-8">
+        <div className="relative transform duration-700 hover:scale-105 h-[300px]">
           <Image
             src={image}
             alt={destinationName}
-            layout="fill"
+            fill
             priority
-            className="object-cover w-full h-full max-h-[400px] rounded-lg"
+            className="object-cover w-full h-full  rounded-lg"
           />
         </div>
         <div className="flex flex-col flex-1 text-white justify-between">
@@ -32,10 +32,8 @@ const DestinationCard: React.FC<DestinationProps> = ({
             <h3 className="text-[16px] text-center md:text-start md:text-[20px] font-bold">
               {destinationName}
             </h3>
-            <p className="text-[14px] font-light mb-6 hidden md:block">
-              {description}
-            </p>
-            <div className="mb-6 hidden md:block">
+            <p className="text-[14px] font-light mb-6 ">{description}</p>
+            <div className="mb-6 ">
               <h5 className="text-[16px] font-semibold mb-2 ">
                 Activity Highlights:
               </h5>
