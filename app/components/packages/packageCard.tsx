@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { MapPin, Calendar, Users, MessageCircle, Phone } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface PackageProps {
   title: string;
@@ -19,6 +22,24 @@ const PackageCard: React.FC<PackageProps> = ({
   people,
   price,
 }) => {
+  const router = useRouter();
+  const phoneNumber = "+919596173535";
+  const handleWhatsAppRedirect = () => {
+    const message =
+      "Hello! I'm interested in knowing more about your services.";
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.location.href = whatsappURL;
+  };
+
+  const handleBook = () => {
+    router.push(`/contact-us`);
+  };
+
+  const handleCallRedirect = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       {/* Image */}
@@ -63,18 +84,21 @@ const PackageCard: React.FC<PackageProps> = ({
           <div className="flex items-center gap-4">
             <div
               className="hover:scale-110 bg-primary hover:bg-secondary transition duration-300 text-white px-4 py-2 rounded-lg text-sm"
-              // onClick={handleCallRedirect}
+              onClick={handleCallRedirect}
             >
               <Phone className="cursor-pointer" />
             </div>
             <div
               className="hover:scale-110 bg-primary hover:bg-secondary transition duration-300 text-white px-4 py-2 rounded-lg text-sm"
-              // onClick={handleWhatsAppRedirect}
+              onClick={handleWhatsAppRedirect}
             >
               <MessageCircle className="cursor-pointer" />
             </div>
           </div>
-          <button className="w-1/2 px-3 py-2 bg-primary text-white font-medium rounded-md hover:bg-secondary">
+          <button
+            className="w-1/2 px-3 py-2 bg-primary text-white font-medium rounded-md hover:bg-secondary"
+            onClick={handleBook}
+          >
             Book Now
           </button>
         </div>

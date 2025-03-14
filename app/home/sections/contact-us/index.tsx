@@ -32,15 +32,21 @@ const ContactUs = () => {
             <ul className="mt-6 space-y-3 text-gray-200">
               <li className="flex items-center gap-3">
                 ✅{" "}
-                <span className="text-lg">Personalized itineraries tailored for you.</span>
+                <span className="text-lg">
+                  Personalized itineraries tailored for you.
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 ✅{" "}
-                <span className="text-lg">Seamless travel with transport, stays & meals included.</span>
+                <span className="text-lg">
+                  Seamless travel with transport, stays & meals included.
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 ✅{" "}
-                <span className="text-lg">24/7 expert support for a smooth journey.</span>
+                <span className="text-lg">
+                  24/7 expert support for a smooth journey.
+                </span>
               </li>
             </ul>
           </div>
@@ -64,9 +70,11 @@ const ContactUs = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
-                  type="date"
-                  placeholder="Date"
-                  className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition"
+                  type="text"
+                  placeholder="Choose a Date"
+                  onFocus={(e) => (e.target.type = "date")}
+                  onBlur={(e) => (e.target.type = "text")}
+                  className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition "
                 />
                 <input
                   type="text"

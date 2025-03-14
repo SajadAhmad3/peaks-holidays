@@ -18,7 +18,7 @@ const Footer = () => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("/contact");
+    router.push("/contact-us");
   };
   return (
     <div className="bg-muted-900 text-white">
@@ -35,7 +35,7 @@ const Footer = () => {
           </Link>
 
           <h2 className="text-xl font-bold mb-4 text-white font-modicaMedium">
-            Want to Take Tour Packages?
+            Explore the Beauty of Kashmir
           </h2>
           <button
             className="max-w-[150px] bg-primary hover:bg-primary transition duration-300 text-white px-4 py-2 text-sm font-bold"
