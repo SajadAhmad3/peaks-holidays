@@ -21,12 +21,12 @@ const Footer = () => {
     router.push("/contact");
   };
   return (
-    <div className="bg-muted-900  text-white">
+    <div className="bg-muted-900 text-white">
       <div className="max-w-[1300px] mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 px-4 pb-4 gap-8 min-h-[400px] pt-10">
         <div className="flex flex-col gap-4">
-          <Link href={"/"} className="relative w-[150px] h-[40px]">
+          <Link href="/" className="relative w-[100px] h-[80px] rotate-3">
             <Image
-              src="/images/snowveil6.svg"
+              src="/images/peak-white-2.png"
               alt="logo"
               fill
               priority

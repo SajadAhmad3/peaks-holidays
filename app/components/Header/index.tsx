@@ -35,13 +35,13 @@ const Header = () => {
         }`}
       >
         <div className="flex items-center justify-between w-full mx-auto">
-          <Link href="/" className="relative w-[150px] h-[40px]">
+          <Link href="/" className="relative w-[150px] h-[50px] rotate-3">
             <Image
-              src="/images/home/logo-transparent.png"
+              src="/images/peak-2.png"
               alt="logo"
               fill
               priority
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover"
             />
           </Link>
 
