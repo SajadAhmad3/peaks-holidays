@@ -1,8 +1,36 @@
+import { useState } from "react";
 import Container from "@/app/components/Container";
-import React from "react";
 import Image from "next/image";
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    destination: "",
+    request: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent page refresh
+    console.log("Form Data Submitted:", formData); // Log data
+
+    // Clear the form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      destination: "",
+      request: "",
+    });
+  };
+
   return (
     <Container className="mb-16">
       <div className="relative w-full ">
@@ -10,7 +38,7 @@ const ContactUs = () => {
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 p-4 text-white">
           <div className="w-full h-full">
             <Image
-              src="/images/home/banner.jpg"
+              src="/images/home/snowboard.jpg"
               alt="Banner"
               fill
               priority
@@ -55,35 +83,55 @@ const ContactUs = () => {
             <h2 className="text-[24px] md:text-[32px] font-extrabold text-white text-center">
               Book A Tour
             </h2>
-            <form className="text-white text-[18px] space-y-6">
+            <form
+              onSubmit={handleSubmit}
+              className="text-white text-[18px] space-y-6"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Your Name"
                   className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition"
+                  required
                 />
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Your Email"
                   className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition"
+                  required
                 />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
-                  type="text"
-                  placeholder="Choose a Date"
-                  onFocus={(e) => (e.target.type = "date")}
-                  onBlur={(e) => (e.target.type = "text")}
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Phone Number"
                   className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition "
+                  required
                 />
                 <input
                   type="text"
+                  name="destination"
+                  value={formData.destination}
+                  onChange={handleChange}
                   placeholder="Destination"
                   className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition"
+                  required
                 />
               </div>
               <div>
                 <textarea
+                  name="request"
+                  value={formData.request}
+                  onChange={handleChange}
                   placeholder="Special Request"
                   rows={4}
                   className="border bg-transparent p-4 w-full rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-secondary transition"

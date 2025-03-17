@@ -9,7 +9,7 @@ const Destinations = () => {
     <Container className="mb-10 mt-[70px]">
       <div className="relative w-full h-[200px] lg:h-[350px] ">
         <Image
-          src={"/images/home/banner.jpg"}
+          src={"/images/home/snowboard.jpg"}
           alt="Banner"
           className="object-cover w-full h-full brightness-50"
           layout="fill"

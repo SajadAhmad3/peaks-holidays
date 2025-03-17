@@ -1,15 +1,45 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Container from "../components/Container";
 import Image from "next/image";
 import { Phone, Mail, MapPin, CheckCircle, Headset } from "lucide-react";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    date: "",
+    destination: "",
+    request: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent page refresh
+    console.log("Form Data Submitted:", formData); // Log data
+
+    // Clear the form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      date: "",
+      destination: "",
+      request: "",
+    });
+  };
+
   return (
     <Container className="flex flex-col justify-center items-center min-h-screen">
       <div className="relative w-full h-[200px] lg:h-[350px] ">
         <Image
-          src={"/images/home/banner.jpg"}
+          src={"/images/home/snowboard.jpg"}
           alt="Banner"
           className="object-cover w-full h-full brightness-50"
           layout="fill"
@@ -67,36 +97,70 @@ const ContactForm = () => {
             </p>
 
             {/* Form */}
-            <form className="text-white text-[18px] space-y-10">
+            <form
+              onSubmit={handleSubmit}
+              className="text-white text-[18px] space-y-10"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition"
+                  required
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition"
+                  required
+                />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input
+                  maxLength={15}
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition"
+                  required
+                />
+                <input
+                  type="text"
+                  name="date"
+                  placeholder="Choose a Date"
+                  value={formData.date}
+                  onChange={handleChange}
+                  onFocus={(e) => (e.target.type = "date")}
+                  onBlur={(e) => (e.target.type = "text")}
+                  className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition"
+                  required
                 />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
                   type="text"
-                  placeholder="Choose a Date"
-                  onFocus={(e) => (e.target.type = "date")}
-                  onBlur={(e) => (e.target.type = "text")}
-                  className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition"
-                />
-                <input
-                  type="text"
                   placeholder="Destination"
+                  name="destination"
+                  value={formData.destination}
+                  onChange={handleChange}
                   className="border bg-transparent p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition"
+                  required
                 />
               </div>
               <div>
                 <textarea
+                  name="request"
                   placeholder="Special Request"
+                  value={formData.request}
+                  onChange={handleChange}
                   rows={4}
                   className="border bg-transparent p-4 w-full rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-secondary transition"
                 ></textarea>

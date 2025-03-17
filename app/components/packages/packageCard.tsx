@@ -75,7 +75,10 @@ const PackageCard: React.FC<PackageProps> = ({
         {/* Price and Title */}
         <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
         <p className="text-xl font-bold text-primary mt-1">
-          ₹{price}{" "}
+          <span className="text-lg font-semibold text-black">
+            Starting from :
+          </span>{" "}
+          {price}{" "}
           <span className="text-md font-medium text-gray-600">per person</span>
         </p>
 

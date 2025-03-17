@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <div className="relative w-full h-[80vh] ">
       <Image
-        src="/images/home/banner.jpg"
+        src="/images/home/peaks_banner.jpg"
         alt="Banner"
         fill
         priority

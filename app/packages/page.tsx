@@ -9,7 +9,7 @@ const Packages = () => {
     <Container className="mb-10 mt-[70px]">
       <div className="relative w-full h-[200px] lg:h-[350px] ">
         <Image
-          src={"/images/home/banner.jpg"}
+          src={"/images/home/snowboard.jpg"}
           alt="Banner"
           className="object-cover w-full h-full brightness-50"
           layout="fill"
@@ -24,7 +24,7 @@ const Packages = () => {
 
       {/* Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-        {packagesData.slice(0, 6).map((pkg, index) => (
+        {packagesData.map((pkg, index) => (
           <PackageCard key={index} {...pkg} />
         ))}
       </div>
