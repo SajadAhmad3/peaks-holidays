@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface DestinationProps {
   image: string;
@@ -15,6 +17,11 @@ const DestinationCard: React.FC<DestinationProps> = ({
   description,
   activities,
 }) => {
+  const router = useRouter();
+
+  const handleBook = () => {
+    router.push("/contact-us");
+  };
   return (
     <div className=" bg-white-400 md:mx-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 p-4 md:p-8">
@@ -48,7 +55,7 @@ const DestinationCard: React.FC<DestinationProps> = ({
           <div className="flex justify-center ">
             <button
               className="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded"
-              // onClick={handleBook}
+              onClick={handleBook}
             >
               Quick Enquiry
             </button>
