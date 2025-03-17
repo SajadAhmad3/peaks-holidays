@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Container from "@/app/components/Container";
 import Image from "next/image";
+import { toast, ToastContainer } from "react-toastify";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ const ContactUs = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // Prevent page refresh
     console.log("Form Data Submitted:", formData); // Log data
+    toast.success("Thank you! We'll get back to you shortly.");
 
     // Clear the form
     setFormData({
@@ -147,6 +149,7 @@ const ContactUs = () => {
             </form>
           </div>
         </div>
+        <ToastContainer position="bottom-left" />
       </div>
     </Container>
   );

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Container from "../components/Container";
 import Image from "next/image";
 import { Phone, Mail, MapPin, CheckCircle, Headset } from "lucide-react";
+import { toast, ToastContainer } from "react-toastify";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -21,10 +22,10 @@ const ContactForm = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent page refresh
-    console.log("Form Data Submitted:", formData); // Log data
+    e.preventDefault(); 
+    console.log("Form Data Submitted:", formData); 
+    toast.success("Thank you! We'll get back to you shortly.");
 
-    // Clear the form
     setFormData({
       name: "",
       email: "",
@@ -173,6 +174,7 @@ const ContactForm = () => {
                 Book Now
               </button>
             </form>
+            <ToastContainer position="bottom-left" />
           </div>
         </div>
       </div>
