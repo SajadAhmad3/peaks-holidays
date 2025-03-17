@@ -26,7 +26,7 @@ const Menu: React.FC = () => {
   return (
     <div className="lg:hidden relative">
       <button
-        className={`text-green-500 focus:outline-none transform transition-transform duration-500 ${
+        className={`text-primary focus:outline-none transform transition-transform duration-500 ${
           isOpen ? "rotate-180" : "rotate-0"
         }`}
         onClick={toggleMenu}
@@ -56,7 +56,7 @@ const Menu: React.FC = () => {
             <li key={index}>
               <Link
                 href={item.path}
-                className="text-sm text-white hover:text-green-500"
+                className="text-sm text-white hover:text-secondary"
                 onClick={toggleMenu}
               >
                 {item.label}
@@ -65,8 +65,8 @@ const Menu: React.FC = () => {
           ))}
         </ul>
         <Link
-          href="/contact"
-          className={`mt-4 bg-green-500 hover:bg-green-600 hover:duration-300 transition-all duration-500 text-white px-4 py-2 rounded-lg text-[10px] max-w-[100px] ease-in-out ${
+          href="/contact-us"
+          className={`mt-4 bg-primary hover:bg-secondary hover:duration-300 transition-all duration-500 text-white px-4 py-2 rounded-lg text-[10px] max-w-[100px] ease-in-out ${
             isOpen ? "opacity-100" : "opacity-0"
           }`}
           onClick={toggleMenu}

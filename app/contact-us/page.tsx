@@ -45,7 +45,7 @@ const ContactForm = () => {
           layout="fill"
           priority
         />
-        <div className="absolute inset-0 flex items-center justify-center px-4">
+        <div className="absolute inset-0 top-20 flex items-center justify-center px-4">
           <h2 className="text-xxl md:text-xxxl lg:text-4xl font-bold mb-4 text-white font-modicaMedium">
             Contact Us
           </h2>
