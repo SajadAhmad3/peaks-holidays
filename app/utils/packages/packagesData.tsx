@@ -84,14 +84,6 @@ export const packagesData = [
     people: "Per Person",
     price: "₹15,500",
   },
-  {
-    title: "Sonamarg Zoji La Pass Trip",
-    image: "/images/packages/sonamarg_zojila.jpg",
-    location: "Sonamarg",
-    duration: "2 days",
-    people: "Per Person",
-    price: "₹10,000",
-  },
   // General Kashmir Packages
   {
     title: "Kashmir Honeymoon Special",
@@ -119,7 +111,7 @@ export const packagesData = [
   },
   {
     title: "Kashmir Family Vacation",
-    image: "/images/packages/kashmir_family.jpg",
+    image: "/images/packages/kashmir_vacation.jpg",
     location: "Kashmir",
     duration: "7 days",
     people: "Per Person",
@@ -127,7 +119,7 @@ export const packagesData = [
   },
   {
     title: "Kashmir Adventure Package",
-    image: "/images/packages/kashmir_adventure.jpg",
+    image: "/images/packages/kashmir_adventure.jpeg",
     location: "Kashmir",
     duration: "6 days",
     people: "Per Person",
@@ -145,7 +137,7 @@ export const packagesData = [
   },
   {
     title: "Srinagar Mughal Gardens Tour",
-    image: "/images/packages/srinagar_gardens.jpg",
+    image: "/images/packages/chashma-shahi.jpg",
     location: "Srinagar",
     duration: "2 days",
     people: "Per Person",
@@ -153,7 +145,7 @@ export const packagesData = [
   },
   {
     title: "Srinagar Cultural Delight",
-    image: "/images/packages/srinagar_culture.jpg",
+    image: "/images/packages/delight-kashmir.jpg",
     location: "Srinagar",
     duration: "4 days",
     people: "Per Person",
@@ -161,19 +153,11 @@ export const packagesData = [
   },
   {
     title: "Srinagar and Gulmarg Combo",
-    image: "/images/packages/srinagar_gulmarg.jpg",
+    image: "/images/packages/kashmir_dal.jpg",
     location: "Srinagar, Gulmarg",
     duration: "5 days",
     people: "Per Person",
     price: "₹15,000",
-  },
-  {
-    title: "Srinagar Leisure Package",
-    image: "/images/packages/srinagar_leisure.jpg",
-    location: "Srinagar",
-    duration: "3 days",
-    people: "Per Person",
-    price: "₹8,500",
   },
 
   // Leh-Ladakh Packages
@@ -187,7 +171,7 @@ export const packagesData = [
   },
   {
     title: "Leh-Ladakh Cultural Tour",
-    image: "/images/packages/leh_cultural_tour.jpg",
+    image: "/images/packages/leh_ladakh.jpg",
     location: "Leh-Ladakh",
     duration: "7 days",
     people: "Per Person",
@@ -195,7 +179,7 @@ export const packagesData = [
   },
   {
     title: "Leh-Ladakh Photography Tour",
-    image: "/images/packages/leh_photography_tour.jpg",
+    image: "/images/packages/leh_ride.jpg",
     location: "Leh-Ladakh",
     duration: "8 days",
     people: "Per Person",
@@ -203,7 +187,7 @@ export const packagesData = [
   },
   {
     title: "Leh-Ladakh Jeep Safari",
-    image: "/images/packages/leh_jeep_safari.jpg",
+    image: "/images/packages/jeep_safari.avif",
     location: "Leh-Ladakh",
     duration: "9 days",
     people: "Per Person",
